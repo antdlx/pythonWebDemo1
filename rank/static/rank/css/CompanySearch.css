@@ -1,0 +1,68 @@
+:root{
+    --main-color:blue;
+    --main-background-color:white;
+    --main-hover-color:blue;
+    --main-hover-font-color:white;
+}
+
+body {
+    padding-top: 50px;
+    background-color: #aaaaaa;
+}
+
+.searchBox {
+    padding: 60px 15px;
+    margin: 30px auto;
+    background-color: var(--main-background-color);
+}
+
+#search_btn {
+    width: 100%;
+}
+
+.selected,#btn_search:active{
+    background-color: var(--main-hover-color);
+    color: var(--main-hover-font-color);
+}
+
+.selectBox{
+    padding: 20px 15px;
+    margin: 30px auto;
+    background-color: var(--main-background-color);
+}
+
+.listBox{
+    margin: 20px 0px;
+}
+
+.btn_select {
+    border: 0px;
+    margin-right: 20px;
+}
+
+.btn_select:hover {
+    background-color: var(--main-color);
+    color: var(--main-hover-font-color);
+}
+
+.list_custom {
+    margin-bottom: 20px;
+}
+
+.multiline{
+    margin: 10px 15px;
+    height: 80px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.singleline{
+    width: 330px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
