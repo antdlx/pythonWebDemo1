@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
-from rank.views import *
-
+from rank.views import company, index, search, rank
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^company/$', company, name='company'),
-    url(r'^getpages/$', getPages, name='get_pages'),
+    url(r'^$', index, name='index'),
+
+    url(r'^admin/', admin.site.urls, name='admin'),
+    url(r'^search/$', search, name='search'),
+    url(r'^list/$', list, name='list'),
+    url(r'^company/(\d)/$', company, name='company'),
+    url(r'^rank/$', rank, name='rank'),
+    # url(r'^getpages/$', getPages, name='get_pages'),
 ]
+

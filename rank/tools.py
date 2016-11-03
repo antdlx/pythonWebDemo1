@@ -1,15 +1,17 @@
-#-*- coding:utf-8 -*-
+# -*- coding:utf-8 -*-
 import datetime
 import json
 
 
 class MyMath:
-    def UpDivision(self,a,b):
+    def UpDivision(self, a, b):
         a = int(a)
         b = int(b)
-        return int((a+b-1)/b)
+        return int((a + b - 1) / b)
 
         # 解决日期不能json编码的问题
+
+
 class CJsonEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, datetime.datetime):
